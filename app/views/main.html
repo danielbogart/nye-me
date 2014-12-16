@@ -1,0 +1,18 @@
+<div ng-app="nyeMeApp" ng-controller="TwitterController">
+  <div class='row'>
+    <div class='col-md-6'>
+    <form ng-submit="searchPics(query)">
+      <input class='form-control' ng-model='query' placeholder='Search'>
+    </form>
+    </div>
+  </div>
+  <br>
+  <h3>Showing results for {{ query }}</h3>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div ng-repeat="pic in pics" class="inline">
+        <a href="{{pic.link}}" target="_blank"><img ng-src="{{pic.images.thumbnail.url}}" /></a>
+      </div>
+    </div>
+  </div>
+</div>
